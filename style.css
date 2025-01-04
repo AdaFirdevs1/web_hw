@@ -1,0 +1,302 @@
+header{
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    font-weight: 700;
+    background-image: linear-gradient(to right, rgb(123, 5, 5), rgb(243, 26, 26));
+    color: white;
+    padding-top: 1px;
+}
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+    padding: 40px;
+    box-sizing: border-box;
+    color: rgb(123, 5, 5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 40px;
+    color: rgb(123, 5, 5);
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    margin-top: 5px;
+}
+.menu li{
+    margin-right: 15px;
+}
+.menu li a{
+    color: rgb(123, 5, 5);
+    text-decoration: none;
+    border: 2px solid rgb(123, 5, 5);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.menu li a:hover{
+    background-color: rgb(243, 26, 26);
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+/*welcome bölümü*/
+
+.bigImage{
+    width: 93%;
+    margin-left: 3%;
+    position: relative;
+}
+.sergi{
+    width: 100%;
+}
+
+/*sergiler bölümü*/
+
+.parts{
+    width: 30%;
+    height: 250px;    
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: black;    
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    border-radius: 7%;
+}
+.parts:hover{
+    background-color: rgb(186, 9, 9);
+    color: white;
+
+}
+.parts .insideimage:hover {
+    border-radius: 10%;
+    transform: scale(1.1); /* Görseli büyütür */
+}
+.parts h2{
+    margin-top: -8px;
+    margin-bottom: -10px;
+}
+.insideimage{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.current{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.mevcutSergiler{
+    margin-left: 40px;
+    margin-bottom: -25px;
+    color: rgb(186, 9, 9);
+    font-size: 20px;
+}
+
+
+
+/*eventler bölümü*/
+
+.events{
+    margin-top: -20px;
+    margin-left: 40px;
+    margin-bottom: -25px;
+    color: rgb(186, 9, 9);
+    font-size: 20px;
+}
+.eve_parts{
+    width: 30%;
+    height: 300px;    
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: black;    
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    border-radius: 7%;
+}
+.eve_parts:hover{
+    background-color: rgb(186, 9, 9);
+    color: white;
+
+}
+.eve_parts .eve_insideimage:hover {
+    border-radius: 10%;
+    transform: scale(1.1); /* Görseli büyütür */
+}
+.eve_parts h2{
+    margin-top: -3px;
+    margin-bottom: -10px;
+}
+.eve_insideimage{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.eve_current{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+
+
+/*sinema bölümü*/
+.cine{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.cine_parts{
+    width: 50%;
+    height: 300px;    
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: black;    
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    border-radius: 7%;
+}
+.cine_parts h1{
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.insideimage_cine{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*footer bölümü*/
+
+footer{
+    display: flex;
+    width: 100%;
+    margin-top: 120px;
+    background-image: linear-gradient(to right, rgb(123, 5, 5), rgb(243, 26, 26));
+}
+.footsec1{
+    text-align: center;
+    color: white;
+    width: 50%;
+}
+.footsec2{
+    text-align: center;
+    color: white;
+    width: 50%;
+    padding-top: 50px;
+}
+
+
+
+/*boyut ayarlama bölümü*/
+
+@media screen and (max-width: 1200px) {
+    .current, .eve_current, .cine {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .parts, .eve_parts, .cine_parts {
+        width: 45%; 
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header{
+        font-size: 13px;
+    }
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .menu {
+        font-size: 14px;
+        justify-content: center; 
+    }
+    .logo{
+        text-align: center;
+    }
+    
+    .bigImage {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .current, .eve_current, .cine {
+        flex-wrap: wrap;
+        
+    }
+
+    .parts, .eve_parts, .cine_parts {
+        display: block;
+    }
+
+    .eve_parts{
+        height: 250px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footsec1, .footsec2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header{
+        font-size: 13px;
+    }
+    nav {
+        padding: 10px;
+    }
+
+    .menu li {
+        font-size: 12px;
+    }
+
+    .mevcutSergiler, .events{
+        text-align: center;
+    }
+
+    .parts, .eve_parts, .cine_parts {
+        width: 100%; 
+        margin-right: -30px;
+    }
+
+    .parts h2, .eve_parts h2, .cine_parts h1 {
+        font-size: 16px; 
+    }
+
+    .insideimage, .eve_insideimage, .insideimage_cine {
+        width: 100%;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
